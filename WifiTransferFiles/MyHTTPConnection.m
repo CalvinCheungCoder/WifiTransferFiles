@@ -142,8 +142,6 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 
 //-----------------------------------------------------------------
 #pragma mark multipart form data parser delegate
-
-
 - (void) processStartOfPartWithHeader:(MultipartMessageHeader*) header {
     // in this sample, we are not interested in parts, other then file parts.
     // check content disposition to find out filename
@@ -157,7 +155,6 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
         return;
     }
     //	NSString* uploadDirPath = [[config documentRoot] stringByAppendingPathComponent:@"upload"];
-    
     NSString *uploadDirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     
     BOOL isDir = YES;
